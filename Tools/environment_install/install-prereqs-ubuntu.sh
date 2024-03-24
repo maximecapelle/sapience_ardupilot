@@ -11,6 +11,7 @@ fi
 OPT="/opt"
 # Ardupilot Tools
 ARDUPILOT_TOOLS="Tools/autotest"
+USER="admin"
 
 ASSUME_YES=false
 QUIET=false
@@ -231,7 +232,7 @@ function maybe_prompt_user() {
 }
 
 heading "Add user to dialout group to allow managing serial ports"
-sudo usermod -a -G dialout $USER
+#sudo usermod -a -G dialout $USER
 echo "Done!"
 
 # Add back python symlink to python interpreter on Ubuntu >= 20.04
